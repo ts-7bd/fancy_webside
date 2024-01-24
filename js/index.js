@@ -3,7 +3,7 @@ window.onscroll = () => {scrollFunction()};
 
 const scrollFunction = () => {
   // get the button element
-  const topButtonElement = document.getElementsByClassName("topButton")[0];
+  const topButtonElement = document.getElementsByClassName("up-to-top-button")[0];
 
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     topButtonElement.style.display = "block";
@@ -26,7 +26,6 @@ const topFunction = () => {
 
 document.addEventListener("DOMContentLoaded", function() {
     // get the author from the meta tag
-
     const authorMeta = document.querySelector('meta[name="author"]');
     const authorName = authorMeta ? authorMeta["content"] : "unbekannt"
     const authorElement = document.getElementById("author");
@@ -36,5 +35,19 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
         authorElement.innerText = "Der Autor dieser Seite ist unbekannt."
     }
+    
+    const menuButtonElement = document.getElementsByClassName("menu-button")[0];
+    console.log(menuButtonElement)
+
+    const menuLinksElement = document.getElementById("menuLinks")
+    console.log(menuLinksElement)
+
+    menuButtonElement.addEventListener("click", (event) => {
+      if (menuLinksElement.style.display === "block") {
+        menuLinksElement.style.display = "none";
+      } else {
+        menuLinksElement.style.display = "block";
+      }
+    });
 
 })

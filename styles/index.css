@@ -88,7 +88,7 @@ div.paragraph {
 }
 
 /* up-to-the-top-button */
-button.topButton {
+button.up-to-top-button {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
   bottom: 15px; /* Place the button at the bottom of the page */
@@ -104,7 +104,7 @@ button.topButton {
   font-style: oblique;
 }
 
-button.topButton:hover {
+button.up-to-top-button:hover {
   background-color: palevioletred; /* Add a dark-grey background on hover */
 }
 
@@ -123,6 +123,55 @@ button.topButton:hover {
   z-index: 10;
 }
 
+.top-bar #menuLinks {
+  display: none;
+  width: 150px;
+  margin: 0px 10px;
+  right: 0px;
+  top: 60px;
+  padding: 10px 10px;
+  background-color: bisque;
+  position: absolute;
+
+  a {
+    color: orangered;
+    text-align: right;
+  }
+}
+
+.fa {
+  display: inline-block;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.top-bar a {
+  color: whitesmoke;
+  padding: 0 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.top-bar a.menu-button {
+  background: midnightblue;
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.top-bar a.menu-button:hover {
+  background-color: bisque;
+  color: black;
+}
+
+
+
+
+
+/* does not appear as wished 
 .burger-menu {
   background-color: orange;
 }
@@ -204,3 +253,4 @@ button.topButton:hover {
 .menu__item:hover {
   background-color: #CFD8DC;
 }
+*/
