@@ -18,13 +18,13 @@ const topFunction = () => {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, Edge and Opera
 } 
 
-
 // get current date
 // const currentYear = new Date().getFullYear()
 // const yearSpan = document.getElementById("currentYear")
 // yearSpan.textContent = currentYear
 
 document.addEventListener("DOMContentLoaded", function() {
+
     // get the author from the meta tag
     const authorMeta = document.querySelector('meta[name="author"]');
     const authorName = authorMeta ? authorMeta["content"] : "unbekannt"
