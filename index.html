@@ -7,9 +7,10 @@
         <meta charset="UTF-8">
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="Thomas Schöngaßner">
-        <meta http-equiv="refresh" content="45">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       
+        <meta http-equiv="refresh" content="45">
+        <meta http-equiv="x-ua-compatible" content="IE=edge" />
+
         <title>Fancy Website</title>
 
         <link rel="stylesheet" href="./styles/index.css"> 
@@ -25,39 +26,39 @@
                 Nur das Beste vom Wetter!
             </a>
             <div id="menuLinks">
-              <a href="#news">News</a>
-              <a href="#contact">Contact</a>
-              <a href="#about">About</a>
+              <a href="index.html">Home</a>
+              <a href="forecast.html">Wettervorhersage</a>
+              <a href="klickzaehler.html">Klickzähler</a>
             </div>
 
             <a class="menu-button"">
                 <span class="fa">&#9776;</span>
             </a>
-            
+
         </header>    
         
-        <section class="main" id="top">
+        <section class="main">
 
             <h1> Aufbau einer Gebirgswetterstation</h1>
 
             <h2>Ort und Lage</h2>
-
-                    <link rel="help" href="https://www.w3schools.com/css/">
 
             <div class="paragraph">
                     <div class="image-container">
                         <img src="./images/20230707_102839.jpg" width="35%" alt="Blick Taleinwärts">
                         <img src="./images/20230707_102855.jpg" width="35%" alt="Bucheben Großansicht">
                     </div>
-                <p class="text"
-                    >Die Wetterstation steht in Bucheben einem kleinen Dorf in der Gemeinde Rauris in Österreich. Der Standort ist charakterisiert durch seine alpine Lage auf einer Höhe von 1078m. Das Klima ist geprägt vom langem schneereichen Winter und mildem Sommer. Durch die hohen Berge ist auch mit baldiger Abschattung zu rechnen. 
+                <p class="text">
+                    Die Wetterstation steht in Bucheben einem kleinen Dorf in der Gemeinde Rauris in Österreich. Der Standort ist charakterisiert durch seine alpine Lage auf einer Höhe von 1078m. Das Klima ist geprägt vom langem schneereichen Winter und mildem Sommer. Durch die hohen Berge ist auch mit baldiger Abschattung zu rechnen. 
                     Rauris liegt im gleichnamigen Tal am Alpenhauptkamm. Das Tal ist gesäumt von mehreren Bergen mit einer Höhe von über 3000m. Der höchste Berg ist der Hocharn mit einer Höhe von 3254m. Der Sonnblick ist mit seinen 3106m jedoch viel beliebter. Nicht nur wegen dem tollen Bergpanorama und der Gastwirtschaft mitsamt Übernachtungsmöglichkeit sondern vorallem wegen dem <a href="https://www.sonnblick.net/de/das-observatorium/"><b>Sonnblick Observatorium</b></a>, das älteste Wtterobservatorium auf einer Höhe von über 3000m in den Alpen. Mit einer Luftlinie von 12km ist die Wetterstation nicht allzuweit entfernt.
                 </p>
 
                 <hr>
+
                 <br/>
-                <div style="text-align: center;">
-                    <iframe class="openstreetmap" src="https://www.openstreetmap.org/export/embed.html?bbox=12.914772033691408%2C47.12317663688985%2C13.026008605957033%2C47.18107918566494&amp;layer=hot&amp;marker=47.15213579695913%2C12.970390319824219" style="border: 1px solid black"></iframe>
+
+                <div class="iframe-container">
+                    <iframe class="open-street-map" src="https://www.openstreetmap.org/export/embed.html?bbox=12.914772033691408%2C47.12317663688985%2C13.026008605957033%2C47.18107918566494&amp;layer=hot&amp;marker=47.15213579695913%2C12.970390319824219" style="border: 1px solid black"></iframe>
                     <p>Eine Übersichtskarte von openstreetmap. Die Karte ist auf den genauen Standort zentriert und ist interaktiv nutzbar. <a href="https://www.openstreetmap.org/?mlat=47.1522&amp;mlon=12.9703#map=15/47.1522/12.9703"> View Larger Map</a> </p>
                 </div>
             </div>
@@ -114,10 +115,7 @@
             </div>
 
             <button class="up-to-top-button" onclick="topFunction()" title="Zurück zum Anfang"><span>&#8593;</span></button> 
-            <div style="text-align: right; color: midnightblue">
-                <a  href="#top">Zurück zum Anfang</a>
-            </div>
-        
+       
         </section>
 
         <footer>

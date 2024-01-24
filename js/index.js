@@ -18,14 +18,22 @@ const topFunction = () => {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, Edge and Opera
 } 
 
-// get current date
-// const currentYear = new Date().getFullYear()
-// const yearSpan = document.getElementById("currentYear")
-// yearSpan.textContent = currentYear
+// get current date and time and print it in the current-year element if available
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  timeZoneName: "short",
+};
+const currentDateTime = new Date().toLocaleString("de-DE", options)
+const yearElement = document.getElementById("current-date")
+if (yearElement) yearElement.innerText = currentDateTime
 
 document.addEventListener("DOMContentLoaded", function() {
-
-    // get the author from the meta tag
+    // get the author from the meta tag and modify the text printed in the footer
     const authorMeta = document.querySelector('meta[name="author"]');
     const authorName = authorMeta ? authorMeta["content"] : "unbekannt"
     const authorElement = document.getElementById("author");
@@ -36,11 +44,9 @@ document.addEventListener("DOMContentLoaded", function() {
         authorElement.innerText = "Der Autor dieser Seite ist unbekannt."
     }
     
+    // get burger-menu elements and modify styling of the list element (display: on/off)
     const menuButtonElement = document.getElementsByClassName("menu-button")[0];
-    console.log(menuButtonElement)
-
     const menuLinksElement = document.getElementById("menuLinks")
-    console.log(menuLinksElement)
 
     menuButtonElement.addEventListener("click", (event) => {
       if (menuLinksElement.style.display === "block") {
@@ -48,6 +54,51 @@ document.addEventListener("DOMContentLoaded", function() {
       } else {
         menuLinksElement.style.display = "block";
       }
+    });
+
+
+    const addButton = document.getElementById("add");
+    const mulButton = document.getElementById("mul");
+    const resetButton = document.getElementById("reset");
+    const counter = document.getElementById("counter");
+    const clicks = document.getElementById("clicks");
+
+
+
+    addButton.addEventListener("click", (event) => {
+      const number = parseInt(counter.innerText, 10) + 1;
+      const numberClicks = parseInt(clicks.innerText, 10) + 1;
+      counter.innerText = number;
+      clicks.innerText = numberClicks
+      if (parseInt(clicks.innerText) >= 5) {
+        addButton.disabled = true;
+        mulButton.disabled = true;
+      }
+    });
+
+    mulButton.addEventListener("click", (event) => {
+      const number = parseInt(counter.innerText, 10) * 10;
+      const numberClicks = parseInt(clicks.innerText, 10) + 1;
+      counter.innerText = number;
+      clicks.innerText = numberClicks
+
+      if (parseInt(clicks.innerText) >= 5) {
+        addButton.disabled = true;
+        mulButton.disabled = true;
+      }
+    });
+  
+    resetButton.addEventListener("click", () => {
+      counter.innerText = "0";
+      clicks.innerText = "0";
+      addButton.disabled = false;
+      mulButton.disabled = false;
+    });
+  
+    counter.addEventListener("mouseenter", () => {
+      let number = parseInt(counter.innerText, 10);
+      number = number ** 2;
+      counter.innerText = number.toString();
     });
 
 })

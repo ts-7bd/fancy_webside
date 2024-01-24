@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+    <head>  
+
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Thomas Schöngaßner">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta http-equiv="refresh" content="45"> -->
+        <meta http-equiv="x-ua-compatible" content="IE=edge" />
+
+        <title>Fancy Website</title>
+
+        <link rel="stylesheet" href="./styles/index.css"> 
+        <link rel="icon" href="./images/favicon.ico.png" type="image">
+
+    </head>
+
+    <body>
+
+        <header class="top-bar">
+
+            <a>
+                Nur das Beste vom Wetter!
+            </a>
+            <div id="menuLinks">
+              <a href="index.html">Home</a>
+              <a href="forecast.html">Wettervorhersage</a>
+              <a href="klickzaehler.html">Klickzähler</a>
+            </div>
+
+            <a class="menu-button"">
+                <span class="fa">&#9776;</span>
+            </a>
+
+        </header>    
+        
+        <section class="main">
+
+            <h1>Ein Klickzähler der besonderen Art</h1>
+
+            <h2>Schaffst du es mit 5 Klicks zu einer Million?</h2>
+
+            <div class="container">
+                <h3 class="counter">Anzahl an Klicks: <span id="clicks">0</span></h1>
+                <h3 class="counter">Zähler: <span id="counter">0</span></h1>
+                <div class="button-container">
+                    <button class="button" id="add">Plus 1</button>
+                    <button class="button" id="mul">Mal 10</button>
+                    <button class="button" id="reset">Reset!</button>
+                </div>
+              </div>
+
+              <div class="paragraph">
+                <p class="text"> 
+                    Mit den Buttons kann man links den Zähler um 1 hochzählen, in der Mitte mit 10 multiplizieren und rechts wieder auf null zurücksetzen. 
+                    <br>
+                    Sobald der Mouszeiger den Zähler berührt wird dieser quadriert.
+                </p>
+              </div>
+            <button class="up-to-top-button" onclick="topFunction()" title="Zurück zum Anfang"><span>&#8593;</span></button> 
+        
+        </section>
+
+        <footer>
+            <p id="author"></p>
+        </footer> 
+
+        <script src="js/index.js"></script>
+    </body>
+
+
+</html> 
