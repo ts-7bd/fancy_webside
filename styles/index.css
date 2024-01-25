@@ -1,12 +1,11 @@
 body {
     background-image: linear-gradient(180deg, lightblue, lightgreen);
-    /* display: block; */
     margin: 0;
-    /* height: 100%; */
     font-family: 'Trebuchet MS';
+    /* display: block; */
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 
@@ -36,6 +35,7 @@ div.paragraph {
     margin-right: 20px;
 }
 
+/* paragraph should print in block style, definitions how words should be hyphenated */
 .text {
     line-height: 150%;
     hyphens: auto; 
@@ -43,7 +43,7 @@ div.paragraph {
     text-align-last: none;
 }
 
-/* image settings */
+/* image stylings for two images in a row */
 .image-container{
     display: flex;
     justify-content: space-between;
@@ -51,6 +51,11 @@ div.paragraph {
     margin-bottom: 2%;
   }
 
+  img {
+    max-width: 45%;
+  }
+
+  /* image Stylings for images wrapped in several rows */
   .second-image-container {
     display: flexbox;
     flex-wrap: wrap;
@@ -63,9 +68,6 @@ div.paragraph {
     }
   }
 
-  img {
-    max-width: 45%;
-  }
 
   /* styling the inline frames from external sources */
   div.iframe-container {
@@ -92,9 +94,8 @@ div.paragraph {
     margin-top: 20px;
     padding: 10px;
     border: 3px solid black;
-    /* bottom: 0px; */
+    bottom: 0px;
     /* position: relative; */
-    flex-shrink: 0;
 
     p {
     margin: 0;
@@ -105,23 +106,20 @@ div.paragraph {
 
 /* up-to-the-top-button */
 button.up-to-top-button {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 15px; /* Place the button at the bottom of the page */
-  right: 15px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: bisque; /* Set a background color */
-  color: black; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 15px; /* Rounded corners */
-  font-style: oblique;
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background-color: bisque;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
 }
 
 button.up-to-top-button:hover {
-  background-color: palevioletred; /* Add a dark-grey background on hover */
+  background-color: palevioletred;
 }
 
 /* top-bar component and burger menu */
@@ -139,31 +137,7 @@ button.up-to-top-button:hover {
   z-index: 10;
 }
 
-.top-bar #menuLinks {
-  display: none;
-  width: 200px;
-  margin: 0px 10px;
-  top: 60px;
-  right: 0px;
-  background-color: bisque;
-  position: absolute;
-
-  a {
-    color: orangered;
-    font-size: 14px;
-    text-align: right;
-    margin-right: 10px;
-  }
-}
-
-.fa {
-  display: inline-block;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
+/* general a elements of the top-bar - title- and burger-color */
 .top-bar a {
   color: whitesmoke;
   padding: 0 16px;
@@ -171,6 +145,7 @@ button.up-to-top-button:hover {
   display: block;
 }
 
+/* burger button color and behaviour */
 .top-bar a.menu-button {
   background: midnightblue;
   display: block;
@@ -184,8 +159,38 @@ button.up-to-top-button:hover {
   color: black;
 }
 
+/* stylings for the menu and the links */
+.top-bar #menuLinks {
+  display: none;
+  width: 200px;
+  margin: 0px 10px;
+  top: 60px;
+  right: 0px;
+  background-color: bisque;
+  position: absolute;
+
+  /* link titles */
+  a {
+    color: orangered;
+    font-size: 14px;
+    text-align: right;
+    margin-right: 10px;
+  }
+}
+
+/* extra settings for the burger menu symbol */
+.fa {
+  display: inline-block;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 
+/* stylings for klickzehler.html */
+
+/* stylings of the implemented container in the main section */
 div.container {
   width: 50%;
   margin: 0px auto;
@@ -201,12 +206,14 @@ div.container {
   );
 }
 
+/* text-color margins of counts and text in the container */
 .counter {
   color: white;
   margin: 1rem 2rem;
   text-align: left;
 }
 
+/* definitions for the buttons */
 .button-container {
   margin: 2rem 1rem;
   display: flex;
@@ -226,18 +233,13 @@ div.container {
   transition: background-color linear 0.1s, border linear 0.1s;
 }
 
-.button-container .button:hover {
-  background-color: #2989d8;
-  border: 1px solid #1e5799;
-}
-
-.button-container .button:disabled {
+.button-container .button:hover .button:disabled {
   background-color: #2989d8;
   border: 1px solid #1e5799;
 }
 
 
-
+/* definitions for climate.html */
 section.cities {
   box-sizing: border-box;
 }
@@ -257,6 +259,7 @@ nav.cities ul {
   padding: 0;
 }
 
+/* the article template */
 article {
   float: left;
   padding: 20px;

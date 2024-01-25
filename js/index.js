@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const numberClicks = parseInt(clicks.innerText, 10) + 1;
         counter.innerText = number;
         clicks.innerText = numberClicks
-        if (parseInt(clicks.innerText) >= 5) {
+        if (parseInt(clicks.innerText) >= 4) {
           addButton.disabled = true;
           mulButton.disabled = true;
         }
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
         counter.innerText = number;
         clicks.innerText = numberClicks
 
-        if (parseInt(clicks.innerText) >= 5) {
+        if (parseInt(clicks.innerText) >= 4) {
           addButton.disabled = true;
           mulButton.disabled = true;
         }
