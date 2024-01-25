@@ -106,3 +106,19 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
 })
+
+// climate.html: show article element for selected city and hide all other articles
+const selectCity = (element) => {
+  const city = element.getAttribute("href").slice(1)
+  const cityElement = document.getElementById(city);
+  console.log("city", city)
+
+  const articles = document.getElementsByTagName("article")
+  for (const articleElement of articles) {
+    if (articleElement === cityElement) {
+      articleElement.style.display = "block";
+    } else {
+      articleElement.style.display = "none";
+    }
+  }
+}

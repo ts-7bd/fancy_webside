@@ -8,7 +8,7 @@
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="Thomas Schöngaßner">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="refresh" content="45">
+        <!-- <meta http-equiv="refresh" content="45"> -->
         <meta http-equiv="x-ua-compatible" content="IE=edge" />
 
         <title>Fancy Website</title>
@@ -43,31 +43,60 @@
 
             <h1> Klimaübersicht für verschiedenen Orte</h1>
 
-            <section class="cities">
+            <h2>Wähle einen Ort aus der Liste!</h2>
+
+            <div class="paragraph">
+
+              <section class="cities">
                 <nav class="cities">
                   <ul>
-                    <li><a href="#London">London</a></li>
-                    <li><a href="#Paris">Paris</a></li>
-                    <li><a href="#Tokyo">Tokyo</a></li>
+                    <li><a href="#Hamburg" onclick="selectCity(this)">Hamburg</a></li>
+                    <li><a href="#Stuttgart" onclick="selectCity(this)">Stuttgart</a></li>
+                    <li><a href="#Wien" onclick="selectCity(this)">Wien</a></li>
+                    <li><a href="#Salzburg" onclick="selectCity(this)">Salzburg</a></li>
+                    <li><a href="#Rauris" onclick="selectCity(this)">Rauris</a></li>
+
                   </ul>
                 </nav>
                 
-                <article id="London">
-                  <h1>London</h1>
-                  <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-                  <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+                <article id="Hamburg">
+                  <h1>Hamburg</h1>
+                  <p>
+                    Das Klima in diesem Ort ist mild sowie allgemein warm und gemäßigt. Der Niederschlag in Hamburg ist hoch, auch während dem trockensten Monat. Cfb lautet die Klassifikation des Klimas nach Köppen und Geiger. Im Jahresdurchschnitt beträgt die Temperatur in Hamburg 9.8 °C. 804 mm Niederschlag fallen innerhalb eines Jahres.
+                  </p>
+                  <p>Nähere Details sind auf <a href="https://klima.org/deutschland/klima-hamburg/">klima.org</a> erähltlich.</p>
                 </article>
-                <article id="Paris">
-                    <h1>Paris</h1>
-                    <p>Paris is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-                    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+                <article id="Stuttgart">
+                    <h1>Stuttgart</h1>
+                    <p>
+                      Stuttgart's Klima wird als warm und gemäßigt klassifiziert. Stuttgart ist eine Stadt mit einer erheblichen Menge an Niederschlägen. Selbst im trockensten Monat fällt eine Menge Regen. Cfb lautet die Klassifikation des Klimas nach Köppen und Geiger. Die Jahresdurchschnittstemperatur in Stuttgart liegt bei 10.0 °C Jährlich fallen etwa 877 mm Niederschlag. 
+                    </p>
+                    <p>Nähere Details sind auf  <a href="https://de.climate-data.org/europa/deutschland/baden-wuerttemberg/stuttgart-6363/">climate-data.org</a> erähltlich.</p>
                   </article>
-                  <article id="Tokyo">
-                    <h1>Tokyo</h1>
-                    <p>Tokyo is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-                    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+                  <article id="Wien">
+                    <h1>Wien</h1>
+                    <p>
+                      Wien's Klima wird als warm und gemäßigt klassifiziert. Wien hat während des Jahres eine erhebliche Menge an Niederschlägen zu verzeichnen. Das gilt auch für den trockensten Monat. Die Klimaklassifikation nach Köppen und Geiger lautet Cfb. Die Temperatur liegt in Wien im Jahresdurchschnitt bei 10.9 °C. 703 mm Niederschlag fallen innerhalb eines Jahres. 
+                    </p>
+                    <p>Nähere Details sind auf  <a href="https://de.climate-data.org/europa/oesterreich/wien/wien-41/">climate-data.org</a> erähltlich.</p>
                   </article>
-              </section>
+                  <article id="Salzburg">
+                    <h1>Salzburg</h1>
+                    <p>
+                      Salzburg's Klima wird als warm und gemäßigt klassifiziert. Es gibt das ganze Jahr über deutliche Niederschläge in Salzburg. Selbst der trockenste Monat weist noch hohe Niederschlagsmengen auf. Cfb lautet die Klassifikation des Klimas nach Köppen und Geiger. In Salzburg herrscht im Jahresdurchschnitt einer Temperatur von 8.4 °C. 1870 mm Niederschlag fallen innerhalb eines Jahres. 
+                    </p>
+                    <p>Nähere Details sind auf <a href="https://de.climate-data.org/europa/oesterreich/salzburg/salzburg-860/">climate-data.org</a> erähltlich.</p>
+                  </article>
+                  <article id="Rauris">
+                    <h1>Rauris</h1>
+                    <p>
+                      In Rauris ist es allgemein kalt und gemäßigt. Rauris hat während des Jahres eine erhebliche Menge an Niederschlägen zu verzeichnen. Das gilt auch für den trockensten Monat. Die Klassifikation des Klimas lautet Dfb entsprechend der Klima-Klassen nach Köppen-Geiger. In Rauris herrscht im Jahresdurchschnitt einer Temperatur von 3.3 °C. Innerhalb eines Jahres gibt es 1611 mm Niederschlag.
+                    </p>
+                    <p>Nähere Details sind auf <a href="https://de.climate-data.org/europa/oesterreich/salzburg/rauris-22376/">climate-data.org</a> erähltlich.</p>
+                  </article>
+                </section>
+
+            </div>
 
             <button class="up-to-top-button" onclick="topFunction()" title="Zurück zum Anfang"><span>&#8593;</span></button> 
        
