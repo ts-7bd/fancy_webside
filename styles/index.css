@@ -152,6 +152,7 @@ button.up-to-top-button:hover {
   position: absolute;
   right: 10px;
   top: 10px;
+  margin-right: 20px;
 }
 
 .top-bar a.menu-button:hover {
@@ -165,7 +166,7 @@ button.up-to-top-button:hover {
   width: 200px;
   margin: 0px 10px;
   top: 60px;
-  right: 0px;
+  right: 20px;
   background-color: bisque;
   position: absolute;
 
@@ -182,9 +183,6 @@ button.up-to-top-button:hover {
 .fa {
   display: inline-block;
   font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 
