@@ -234,3 +234,39 @@ div.container {
   background-color: #2989d8;
   border: 1px solid #1e5799;
 }
+
+
+
+section.cities {
+  box-sizing: border-box;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav.cities {
+  float: left;
+  width: 20%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav.cities ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 50%;
+  background-color: #f1f1f1;
+}
+
+/* Clear floats after the columns */
+section.cities::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+

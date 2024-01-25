@@ -32,6 +32,7 @@ const currentDateTime = new Date().toLocaleString("de-DE", options)
 const yearElement = document.getElementById("current-date")
 if (yearElement) yearElement.innerText = currentDateTime
 
+// event listeners
 document.addEventListener("DOMContentLoaded", function() {
     // get the author from the meta tag and modify the text printed in the footer
     const authorMeta = document.querySelector('meta[name="author"]');
@@ -56,49 +57,52 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
 
-
+    // klickzaehler: react on clicks on the buttons
     const addButton = document.getElementById("add");
     const mulButton = document.getElementById("mul");
     const resetButton = document.getElementById("reset");
     const counter = document.getElementById("counter");
     const clicks = document.getElementById("clicks");
 
+    if (addButton && mulButton && resetButton) {
+      // add one to counter and to clicks when add button is clicked
+      addButton.addEventListener("click", (event) => {
+        const number = parseInt(counter.innerText, 10) + 1;
+        const numberClicks = parseInt(clicks.innerText, 10) + 1;
+        counter.innerText = number;
+        clicks.innerText = numberClicks
+        if (parseInt(clicks.innerText) >= 5) {
+          addButton.disabled = true;
+          mulButton.disabled = true;
+        }
+      });
 
+      // multiply counter with ten and one to to clicks when add button is clicked
+      mulButton.addEventListener("click", (event) => {
+        const number = parseInt(counter.innerText, 10) * 10;
+        const numberClicks = parseInt(clicks.innerText, 10) + 1;
+        counter.innerText = number;
+        clicks.innerText = numberClicks
 
-    addButton.addEventListener("click", (event) => {
-      const number = parseInt(counter.innerText, 10) + 1;
-      const numberClicks = parseInt(clicks.innerText, 10) + 1;
-      counter.innerText = number;
-      clicks.innerText = numberClicks
-      if (parseInt(clicks.innerText) >= 5) {
-        addButton.disabled = true;
-        mulButton.disabled = true;
-      }
-    });
-
-    mulButton.addEventListener("click", (event) => {
-      const number = parseInt(counter.innerText, 10) * 10;
-      const numberClicks = parseInt(clicks.innerText, 10) + 1;
-      counter.innerText = number;
-      clicks.innerText = numberClicks
-
-      if (parseInt(clicks.innerText) >= 5) {
-        addButton.disabled = true;
-        mulButton.disabled = true;
-      }
-    });
-  
-    resetButton.addEventListener("click", () => {
-      counter.innerText = "0";
-      clicks.innerText = "0";
-      addButton.disabled = false;
-      mulButton.disabled = false;
-    });
-  
-    counter.addEventListener("mouseenter", () => {
-      let number = parseInt(counter.innerText, 10);
-      number = number ** 2;
-      counter.innerText = number.toString();
-    });
-
+        if (parseInt(clicks.innerText) >= 5) {
+          addButton.disabled = true;
+          mulButton.disabled = true;
+        }
+      });
+    
+      // reset click and counter counts
+      resetButton.addEventListener("click", () => {
+        counter.innerText = "0";
+        clicks.innerText = "0";
+        addButton.disabled = false;
+        mulButton.disabled = false;
+      });
+    
+      // if mouse passes counts it is multiplied with itself
+      counter.addEventListener("mouseenter", () => {
+        let number = parseInt(counter.innerText, 10);
+        number = number ** 2;
+        counter.innerText = number.toString();
+      });
+    }
 })
