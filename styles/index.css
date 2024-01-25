@@ -233,7 +233,8 @@ div.container {
   transition: background-color linear 0.1s, border linear 0.1s;
 }
 
-.button-container .button:hover .button:disabled {
+.button-container .button:hover,
+.button-container .button:disabled {
   background-color: #2989d8;
   border: 1px solid #1e5799;
 }
